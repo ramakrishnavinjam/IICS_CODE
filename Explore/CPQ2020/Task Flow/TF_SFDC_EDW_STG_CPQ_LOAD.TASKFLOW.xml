@@ -1,0 +1,1351 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>Paaaaaaaaa-gt-1027411-2020-03-30T12:43:47.663Z::tf.xml</types1:EntryId>
+      <types1:Name>TF_SFDC_EDW_STG_CPQ_LOAD</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>dev_iod@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2020-03-30T12:43:48Z</types1:CreationDate>
+      <types1:ModifiedBy>dev_iod@informatica.com</types1:ModifiedBy>
+      <types1:ModificationDate>2020-03-31T08:11:22Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>dev_iod@informatica.com</types1:PublishedBy>
+      <types1:PublicationDate>2020-04-02T03:30:04Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/tf.TF_SFDC_EDW_STG_CPQ_LOAD/TF_SFDC_EDW_STG_CPQ_LOAD.tf.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="TF_SFDC_EDW_STG_CPQ_LOAD"
+                   name="TF_SFDC_EDW_STG_CPQ_LOAD"
+                   overrideAPIName="false">
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="New_Account" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:mct-SFDC-EDW-NEW-ACCOUNT</option>
+                  </options>
+               </field>
+               <field description="" name="Pricebookentry" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:mct-SFDC-EDW-STG-PricebookEntry</option>
+                  </options>
+               </field>
+               <field description="" name="Old Account" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:mct-SFDC-EDW-OLD-ACCOUNT</option>
+                  </options>
+               </field>
+               <field description="" name="OpportunitylineItem" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:MCT-SFDC-EDW-STG-OPPORTUNITYLINEITEM</option>
+                  </options>
+               </field>
+               <field description="" name="UserRole" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:mct-SFDC-EDW-STG-USERROLE</option>
+                  </options>
+               </field>
+               <field description="" name="New User" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:mct-SFDC-EDW-STG-NEW-USER</option>
+                  </options>
+               </field>
+               <field description="" name="Partner Relationship" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:MCT-SFDC-EDW-PARTNER-RELATIONSHIP--C</option>
+                  </options>
+               </field>
+               <field description="" name="Partner Program" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:MCT-SFDC-EDW-STG-PARTNER-PROGRAM--C</option>
+                  </options>
+               </field>
+               <field description="" name="New Opportunity" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:mct-SFDC-EDW-NEW-OPPORTUNITY</option>
+                  </options>
+               </field>
+               <field description="" name="Old Opportunity" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:mct-SFDC-EDW-OLD-OPPORTUNITY</option>
+                  </options>
+               </field>
+               <field description="" name="Territory2" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:mct-SFDC-EDW-STG-Territory2</option>
+                  </options>
+               </field>
+               <field description="" name="Blng LegalEntity" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:mct-SFDC-EDW-STG-blng--LegalEntity--c</option>
+                  </options>
+               </field>
+               <field description="" name="Entitlement" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:mct-SFDC-EDW-STG-Entitlement</option>
+                  </options>
+               </field>
+               <field description="" name="Order" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:mct-m-SFDC-EDW-STG-Order</option>
+                  </options>
+               </field>
+               <field description="" name="OrderItem" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:mct-m-SFDC-EDW-STG-OrderItem</option>
+                  </options>
+               </field>
+               <field description="" name="Sbqq Quote" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:mct-SFDC-EDW-STG-SBQQ-QUOTE--C</option>
+                  </options>
+               </field>
+               <field description="" name="SF_WORKFLOW_TRIGGER" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:MCT-CPQ-SF-FLATTEN-TABLE-TRIGGER</option>
+                  </options>
+               </field>
+               <field description="" name="Data Task 1" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:MCT-PRODUCT2</option>
+                  </options>
+               </field>
+               <field description="" name="SBQQ_QUOTELINES__C" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:MCT-SFDC-EDW-STG-SBQQ-QUOTELINES--C</option>
+                  </options>
+               </field>
+               <field description="" name="OLD_USER" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:mct-SFDC-EDW-STG-OLD-USER</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowedUsers>
+                     <user>skothari@informatica.com</user>
+                  </allowedUsers>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="k7bfk178" targetId="k7bfk16x"/>
+               </start>
+               <container id="k7bfk16x" type="parallel">
+                  <title>Parallel Paths 1</title>
+                  <flow id="k7bfk171">
+                     <eventContainer id="k7bfk1as">
+                        <service id="k7bfk1at">
+                           <title>New_Account</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">mct_SFDC_EDW_NEW_ACCOUNT</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">dbT1j6vtOeQh3tucOtAOSx</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="mct-SFDC-EDW-NEW-ACCOUNT">temp.New_Account</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.New_Account/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.New_Account/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.New_Account/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.New_Account/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.New_Account/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.New_Account/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.New_Account/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.New_Account/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.New_Account/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.New_Account/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.New_Account/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.New_Account/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.New_Account/fault"
+                                  id="k7bfk17x"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.New_Account/fault"
+                                  id="k7bfk17y"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="k7bfk172" targetId="k7bfk16x" type="containerLink"/>
+                  </flow>
+                  <flow id="k7bfk1fy">
+                     <eventContainer id="k7bfk1hv">
+                        <service id="k7bfk1gc">
+                           <title>Pricebookentry</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">mct_SFDC_EDW_STG_PricebookEntry</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">aT5br8vAO4zhEPKmhGU0ca</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="mct-SFDC-EDW-STG-PricebookEntry">temp.Pricebookentry</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.Pricebookentry/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.Pricebookentry/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.Pricebookentry/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.Pricebookentry/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.Pricebookentry/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.Pricebookentry/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.Pricebookentry/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.Pricebookentry/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.Pricebookentry/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.Pricebookentry/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.Pricebookentry/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.Pricebookentry/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.Pricebookentry/fault"
+                                  id="k7bfk1ht"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.Pricebookentry/fault"
+                                  id="k7bfk1hu"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="k7bfk1fz" targetId="k7bfk16x" type="containerLink"/>
+                  </flow>
+                  <flow id="k7bfk1g4">
+                     <eventContainer id="k7bfk1ik">
+                        <service id="k7bfk1gk">
+                           <title>Old Account</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">mct_SFDC_EDW_OLD_ACCOUNT</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">3pCJgzNMRNIjJsEbk9Kacq</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="mct-SFDC-EDW-OLD-ACCOUNT">temp.Old Account</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.Old Account/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.Old Account/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.Old Account/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.Old Account/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.Old Account/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.Old Account/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.Old Account/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.Old Account/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.Old Account/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.Old Account/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.Old Account/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.Old Account/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.Old Account/fault"
+                                  id="k7bfk1ii"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.Old Account/fault"
+                                  id="k7bfk1ij"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="k7bfk1g5" targetId="k7bfk16x" type="containerLink"/>
+                  </flow>
+                  <flow id="k8ehkrfv">
+                     <eventContainer id="k8ehkrhh">
+                        <service id="k8ehkrgh">
+                           <title>Data Task 1</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">MCT_PRODUCT2</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">dbpAbAgtA0id1NYUcWfcuB</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="MCT-PRODUCT2">temp.Data Task 1</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.Data Task 1/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.Data Task 1/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.Data Task 1/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.Data Task 1/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.Data Task 1/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.Data Task 1/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.Data Task 1/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.Data Task 1/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.Data Task 1/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.Data Task 1/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.Data Task 1/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.Data Task 1/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.Data Task 1/fault"
+                                  id="k8ehkrhf"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.Data Task 1/fault"
+                                  id="k8ehkrhg"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="k8ehkrfw" targetId="k7bfk16x" type="containerLink"/>
+                  </flow>
+                  <link id="k7bfk170" targetId="k7bfk171" type="containerLink"/>
+                  <link id="k7bfk1fx" targetId="k7bfk1fy" type="containerLink"/>
+                  <link id="k7bfk1g3" targetId="k7bfk1g4" type="containerLink"/>
+                  <link id="k8ehkrfu" targetId="k8ehkrfv" type="containerLink"/>
+                  <link id="k7bfk1j0" targetId="k7bfk1iz"/>
+               </container>
+               <container id="k7bfk1iz" type="parallel">
+                  <title>Parallel Paths 2</title>
+                  <flow id="k7bfk1j3">
+                     <eventContainer id="k7bfk1pc">
+                        <service id="k7bfk1l4">
+                           <title>OpportunitylineItem</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">MCT_SFDC_EDW_STG_OPPORTUNITYLINEITEM</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">0yjNQkpocN8kyn7i33sBSr</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="MCT-SFDC-EDW-STG-OPPORTUNITYLINEITEM">temp.OpportunitylineItem</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.OpportunitylineItem/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.OpportunitylineItem/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.OpportunitylineItem/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.OpportunitylineItem/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.OpportunitylineItem/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.OpportunitylineItem/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.OpportunitylineItem/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.OpportunitylineItem/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.OpportunitylineItem/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.OpportunitylineItem/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.OpportunitylineItem/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.OpportunitylineItem/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.OpportunitylineItem/fault"
+                                  id="k7bfk1pa"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.OpportunitylineItem/fault"
+                                  id="k7bfk1pb"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="k7bfk1j4" targetId="k7bfk1iz" type="containerLink"/>
+                  </flow>
+                  <flow id="k7bfk1jp">
+                     <eventContainer id="k7bfk1sw">
+                        <service id="k7bfk1md">
+                           <title>UserRole</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">mct_SFDC_EDW_STG_USERROLE</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">4WHB2m2IrbPgNHvW5PavMT</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="mct-SFDC-EDW-STG-USERROLE">temp.UserRole</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.UserRole/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.UserRole/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.UserRole/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.UserRole/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.UserRole/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.UserRole/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.UserRole/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.UserRole/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.UserRole/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.UserRole/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.UserRole/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.UserRole/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.UserRole/fault"
+                                  id="k7bfk1su"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.UserRole/fault"
+                                  id="k7bfk1sv"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="k7bfk1jq" targetId="k7bfk1iz" type="containerLink"/>
+                  </flow>
+                  <flow id="k7bfk1k0">
+                     <eventContainer id="k7bfk1vi">
+                        <service id="k7bfk1ms">
+                           <title>New User</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">mct_SFDC_EDW_STG_NEW_USER</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">1n3z4X28sAxiBUevFx6kYP</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="mct-SFDC-EDW-STG-NEW-USER">temp.New User</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.New User/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.New User/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.New User/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.New User/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.New User/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.New User/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.New User/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.New User/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.New User/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.New User/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.New User/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.New User/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.New User/fault"
+                                  id="k7bfk1vg"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.New User/fault"
+                                  id="k7bfk1vh"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="k7bfk1k1" targetId="k7bfk1iz" type="containerLink"/>
+                  </flow>
+                  <flow id="k7bfk1kc">
+                     <eventContainer id="k7bfk1wl">
+                        <service id="k7bfk1n7">
+                           <title>Partner Relationship</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">MCT_SFDC_EDW_PARTNER_RELATIONSHIP__C</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">0T47P7i223SgZqS6jpRFE8</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="MCT-SFDC-EDW-PARTNER-RELATIONSHIP--C">temp.Partner Relationship</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.Partner Relationship/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.Partner Relationship/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.Partner Relationship/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.Partner Relationship/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.Partner Relationship/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.Partner Relationship/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.Partner Relationship/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.Partner Relationship/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.Partner Relationship/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.Partner Relationship/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.Partner Relationship/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.Partner Relationship/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.Partner Relationship/fault"
+                                  id="k7bfk1wj"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.Partner Relationship/fault"
+                                  id="k7bfk1wk"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="k7bfk1kd" targetId="k7bfk1iz" type="containerLink"/>
+                  </flow>
+                  <flow id="k7bfk1kp">
+                     <eventContainer id="k7bfk1xz">
+                        <service id="k7bfk1nm">
+                           <title>Partner Program</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">MCT_SFDC_EDW_STG_PARTNER_PROGRAM__C</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">4hAV2rtGQyVi4pRqNiHYMI</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="MCT-SFDC-EDW-STG-PARTNER-PROGRAM--C">temp.Partner Program</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.Partner Program/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.Partner Program/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.Partner Program/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.Partner Program/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.Partner Program/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.Partner Program/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.Partner Program/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.Partner Program/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.Partner Program/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.Partner Program/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.Partner Program/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.Partner Program/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.Partner Program/fault"
+                                  id="k7bfk1xx"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.Partner Program/fault"
+                                  id="k7bfk1xy"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="k7bfk1kq" targetId="k7bfk1iz" type="containerLink"/>
+                  </flow>
+                  <flow id="k8ekqxrm">
+                     <eventContainer id="k8ekqxta">
+                        <service id="k8ekqxs9">
+                           <title>OLD_USER</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">mct_SFDC_EDW_STG_OLD_USER</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">egJHzJuCCKEifzB0otEoS8</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="mct-SFDC-EDW-STG-OLD-USER">temp.OLD_USER</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.OLD_USER/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.OLD_USER/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.OLD_USER/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.OLD_USER/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.OLD_USER/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.OLD_USER/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.OLD_USER/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.OLD_USER/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.OLD_USER/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.OLD_USER/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.OLD_USER/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.OLD_USER/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.OLD_USER/fault"
+                                  id="k8ekqxt8"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.OLD_USER/fault"
+                                  id="k8ekqxt9"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="k8ekqxrn" targetId="k7bfk1iz" type="containerLink"/>
+                  </flow>
+                  <link id="k7bfk1j2" targetId="k7bfk1j3" type="containerLink"/>
+                  <link id="k7bfk1jo" targetId="k7bfk1jp" type="containerLink"/>
+                  <link id="k7bfk1jz" targetId="k7bfk1k0" type="containerLink"/>
+                  <link id="k7bfk1kb" targetId="k7bfk1kc" type="containerLink"/>
+                  <link id="k7bfk1ko" targetId="k7bfk1kp" type="containerLink"/>
+                  <link id="k8ekqxrl" targetId="k8ekqxrm" type="containerLink"/>
+                  <link id="k7bfk1yp" targetId="k7bfk1yo"/>
+               </container>
+               <container id="k7bfk1yo" type="parallel">
+                  <title>Parallel Paths 3</title>
+                  <flow id="k7bfk1ys">
+                     <eventContainer id="k7bfk20o">
+                        <service id="k7bfk1zc">
+                           <title>New Opportunity</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">mct_SFDC_EDW_NEW_OPPORTUNITY</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">0lKECGN2lSqjaQBY5mZO2T</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="mct-SFDC-EDW-NEW-OPPORTUNITY">temp.New Opportunity</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.New Opportunity/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.New Opportunity/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.New Opportunity/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.New Opportunity/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.New Opportunity/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.New Opportunity/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.New Opportunity/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.New Opportunity/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.New Opportunity/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.New Opportunity/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.New Opportunity/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.New Opportunity/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.New Opportunity/fault"
+                                  id="k7bfk20m"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.New Opportunity/fault"
+                                  id="k7bfk20n"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="k7bfk1yt" targetId="k7bfk1yo" type="containerLink"/>
+                  </flow>
+                  <flow id="k7bfk1yv">
+                     <eventContainer id="k7bfk21v">
+                        <service id="k7bfk1zt">
+                           <title>Old Opportunity</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">mct_SFDC_EDW_OLD_OPPORTUNITY</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">2FJerWW2AaleDBEa2ws5au</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="mct-SFDC-EDW-OLD-OPPORTUNITY">temp.Old Opportunity</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.Old Opportunity/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.Old Opportunity/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.Old Opportunity/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.Old Opportunity/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.Old Opportunity/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.Old Opportunity/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.Old Opportunity/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.Old Opportunity/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.Old Opportunity/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.Old Opportunity/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.Old Opportunity/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.Old Opportunity/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.Old Opportunity/fault"
+                                  id="k7bfk21t"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.Old Opportunity/fault"
+                                  id="k7bfk21u"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="k7bfk1yw" targetId="k7bfk1yo" type="containerLink"/>
+                  </flow>
+                  <link id="k7bfk1yr" targetId="k7bfk1ys" type="containerLink"/>
+                  <link id="k7bfk1yu" targetId="k7bfk1yv" type="containerLink"/>
+                  <link id="k7bfk22p" targetId="k7bfk22o"/>
+               </container>
+               <container id="k7bfk22o" type="parallel">
+                  <title>Parallel Paths 4</title>
+                  <flow id="k7bfk22s">
+                     <eventContainer id="k7bfk2bd">
+                        <service id="k7bfk26b">
+                           <title>Territory2</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">mct_SFDC_EDW_STG_Territory2</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">40C7BP9RxCElAYUxp5BA4d</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="mct-SFDC-EDW-STG-Territory2">temp.Territory2</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.Territory2/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.Territory2/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.Territory2/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.Territory2/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.Territory2/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.Territory2/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.Territory2/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.Territory2/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.Territory2/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.Territory2/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.Territory2/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.Territory2/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.Territory2/fault"
+                                  id="k7bfk2bb"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.Territory2/fault"
+                                  id="k7bfk2bc"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="k7bfk22t" targetId="k7bfk22o" type="containerLink"/>
+                  </flow>
+                  <flow id="k7bfk22v">
+                     <eventContainer id="k7bfk2cy">
+                        <service id="k7bfk26z">
+                           <title>Blng LegalEntity</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">mct_SFDC_EDW_STG_blng__LegalEntity__c</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">6eKYdmljCpRk0P0lkydXId</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="mct-SFDC-EDW-STG-blng--LegalEntity--c">temp.Blng LegalEntity</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.Blng LegalEntity/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.Blng LegalEntity/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.Blng LegalEntity/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.Blng LegalEntity/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.Blng LegalEntity/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.Blng LegalEntity/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.Blng LegalEntity/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.Blng LegalEntity/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.Blng LegalEntity/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.Blng LegalEntity/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.Blng LegalEntity/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.Blng LegalEntity/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.Blng LegalEntity/fault"
+                                  id="k7bfk2cw"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.Blng LegalEntity/fault"
+                                  id="k7bfk2cx"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="k7bfk22w" targetId="k7bfk22o" type="containerLink"/>
+                  </flow>
+                  <flow id="k7bfk23d">
+                     <eventContainer id="k7bfk2ej">
+                        <service id="k7bfk27n">
+                           <title>Entitlement</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">mct_SFDC_EDW_STG_Entitlement</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">8nAAGMkCF29eiaAGhkXE6B</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="mct-SFDC-EDW-STG-Entitlement">temp.Entitlement</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.Entitlement/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.Entitlement/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.Entitlement/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.Entitlement/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.Entitlement/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.Entitlement/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.Entitlement/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.Entitlement/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.Entitlement/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.Entitlement/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.Entitlement/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.Entitlement/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.Entitlement/fault"
+                                  id="k7bfk2eh"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.Entitlement/fault"
+                                  id="k7bfk2ei"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="k7bfk23e" targetId="k7bfk22o" type="containerLink"/>
+                  </flow>
+                  <flow id="k7bfk23w">
+                     <eventContainer id="k7bfk2g4">
+                        <service id="k7bfk28b">
+                           <title>Order</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">mct_m_SFDC_EDW_STG_Order</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">4gJ3yzBvFhykPjobqkjV8E</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="mct-m-SFDC-EDW-STG-Order">temp.Order</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.Order/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.Order/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.Order/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.Order/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.Order/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.Order/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.Order/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.Order/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.Order/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.Order/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.Order/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.Order/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.Order/fault"
+                                  id="k7bfk2g2"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.Order/fault"
+                                  id="k7bfk2g3"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="k7bfk23x" targetId="k7bfk22o" type="containerLink"/>
+                  </flow>
+                  <flow id="k7bfk24g">
+                     <eventContainer id="k7bfk2hp">
+                        <service id="k7bfk28z">
+                           <title>OrderItem</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">mct_m_SFDC_EDW_STG_OrderItem</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">jHnhfS89Eq5ihrfzbenKWL</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="mct-m-SFDC-EDW-STG-OrderItem">temp.OrderItem</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.OrderItem/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.OrderItem/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.OrderItem/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.OrderItem/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.OrderItem/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.OrderItem/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.OrderItem/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.OrderItem/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.OrderItem/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.OrderItem/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.OrderItem/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.OrderItem/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.OrderItem/fault"
+                                  id="k7bfk2hn"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.OrderItem/fault"
+                                  id="k7bfk2ho"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="k7bfk24h" targetId="k7bfk22o" type="containerLink"/>
+                  </flow>
+                  <flow id="k7bfk251">
+                     <eventContainer id="k7bfk2ja">
+                        <service id="k7bfk29n">
+                           <title>Sbqq Quote</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">mct_SFDC_EDW_STG_SBQQ_QUOTE__C</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">3ELVhEdsb8FkzZNOe7Po4I</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="mct-SFDC-EDW-STG-SBQQ-QUOTE--C">temp.Sbqq Quote</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.Sbqq Quote/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.Sbqq Quote/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.Sbqq Quote/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.Sbqq Quote/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.Sbqq Quote/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.Sbqq Quote/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.Sbqq Quote/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.Sbqq Quote/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.Sbqq Quote/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.Sbqq Quote/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.Sbqq Quote/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.Sbqq Quote/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.Sbqq Quote/fault"
+                                  id="k7bfk2j8"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.Sbqq Quote/fault"
+                                  id="k7bfk2j9"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="k7bfk252" targetId="k7bfk22o" type="containerLink"/>
+                  </flow>
+                  <flow id="k8ehkrj1">
+                     <eventContainer id="k8ehkrkp">
+                        <service id="k8ehkrjo">
+                           <title>SBQQ_QUOTELINES__C</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">MCT_SFDC_EDW_STG_SBQQ_QUOTELINES__C</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">3A4FBTVsfiYlDhnfKSOKwD</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="MCT-SFDC-EDW-STG-SBQQ-QUOTELINES--C">temp.SBQQ_QUOTELINES__C</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.SBQQ_QUOTELINES__C/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.SBQQ_QUOTELINES__C/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.SBQQ_QUOTELINES__C/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.SBQQ_QUOTELINES__C/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.SBQQ_QUOTELINES__C/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.SBQQ_QUOTELINES__C/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.SBQQ_QUOTELINES__C/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.SBQQ_QUOTELINES__C/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.SBQQ_QUOTELINES__C/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.SBQQ_QUOTELINES__C/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.SBQQ_QUOTELINES__C/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.SBQQ_QUOTELINES__C/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.SBQQ_QUOTELINES__C/fault"
+                                  id="k8ehkrkn"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.SBQQ_QUOTELINES__C/fault"
+                                  id="k8ehkrko"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="k8ehkrj2" targetId="k7bfk22o" type="containerLink"/>
+                  </flow>
+                  <link id="k7bfk22r" targetId="k7bfk22s" type="containerLink"/>
+                  <link id="k7bfk22u" targetId="k7bfk22v" type="containerLink"/>
+                  <link id="k7bfk23c" targetId="k7bfk23d" type="containerLink"/>
+                  <link id="k7bfk23v" targetId="k7bfk23w" type="containerLink"/>
+                  <link id="k7bfk24f" targetId="k7bfk24g" type="containerLink"/>
+                  <link id="k7bfk250" targetId="k7bfk251" type="containerLink"/>
+                  <link id="k8ehkrj0" targetId="k8ehkrj1" type="containerLink"/>
+                  <link id="k7bfk2yl" targetId="k7bfk2za"/>
+               </container>
+               <eventContainer id="k7bfk2za">
+                  <service id="k7bfk2yk">
+                     <title>SF_WORKFLOW_TRIGGER</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">MCT_CPQ_SF_FLATTEN_TABLE_TRIGGER</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">8HsvfC6IU4Dd9c6NR4hR4M</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="MCT-CPQ-SF-FLATTEN-TABLE-TRIGGER">temp.SF_WORKFLOW_TRIGGER</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.SF_WORKFLOW_TRIGGER/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.SF_WORKFLOW_TRIGGER/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.SF_WORKFLOW_TRIGGER/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.SF_WORKFLOW_TRIGGER/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.SF_WORKFLOW_TRIGGER/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.SF_WORKFLOW_TRIGGER/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.SF_WORKFLOW_TRIGGER/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.SF_WORKFLOW_TRIGGER/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.SF_WORKFLOW_TRIGGER/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.SF_WORKFLOW_TRIGGER/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.SF_WORKFLOW_TRIGGER/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.SF_WORKFLOW_TRIGGER/output/Error_Message">Error Message</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="k7bfk2ym" targetId="c"/>
+                  <events>
+                     <catch faultField="temp.SF_WORKFLOW_TRIGGER/fault"
+                            id="k7bfk2z8"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.SF_WORKFLOW_TRIGGER/fault"
+                            id="k7bfk2z9"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mct-SFDC-EDW-NEW-ACCOUNT"
+                              isByCopy="true"
+                              name="mct-SFDC-EDW-NEW-ACCOUNT">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mct-SFDC-EDW-STG-PricebookEntry"
+                              isByCopy="true"
+                              name="mct-SFDC-EDW-STG-PricebookEntry">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mct-SFDC-EDW-OLD-ACCOUNT"
+                              isByCopy="true"
+                              name="mct-SFDC-EDW-OLD-ACCOUNT">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="MCT-SFDC-EDW-STG-OPPORTUNITYLINEITEM"
+                              isByCopy="true"
+                              name="MCT-SFDC-EDW-STG-OPPORTUNITYLINEITEM">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mct-SFDC-EDW-STG-USERROLE"
+                              isByCopy="true"
+                              name="mct-SFDC-EDW-STG-USERROLE">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mct-SFDC-EDW-STG-NEW-USER"
+                              isByCopy="true"
+                              name="mct-SFDC-EDW-STG-NEW-USER">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="MCT-SFDC-EDW-PARTNER-RELATIONSHIP--C"
+                              isByCopy="true"
+                              name="MCT-SFDC-EDW-PARTNER-RELATIONSHIP--C">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="MCT-SFDC-EDW-STG-PARTNER-PROGRAM--C"
+                              isByCopy="true"
+                              name="MCT-SFDC-EDW-STG-PARTNER-PROGRAM--C">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mct-SFDC-EDW-NEW-OPPORTUNITY"
+                              isByCopy="true"
+                              name="mct-SFDC-EDW-NEW-OPPORTUNITY">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mct-SFDC-EDW-OLD-OPPORTUNITY"
+                              isByCopy="true"
+                              name="mct-SFDC-EDW-OLD-OPPORTUNITY">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mct-SFDC-EDW-STG-Territory2"
+                              isByCopy="true"
+                              name="mct-SFDC-EDW-STG-Territory2">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mct-SFDC-EDW-STG-blng--LegalEntity--c"
+                              isByCopy="true"
+                              name="mct-SFDC-EDW-STG-blng--LegalEntity--c">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mct-SFDC-EDW-STG-Entitlement"
+                              isByCopy="true"
+                              name="mct-SFDC-EDW-STG-Entitlement">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mct-m-SFDC-EDW-STG-Order"
+                              isByCopy="true"
+                              name="mct-m-SFDC-EDW-STG-Order">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mct-m-SFDC-EDW-STG-OrderItem"
+                              isByCopy="true"
+                              name="mct-m-SFDC-EDW-STG-OrderItem">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mct-SFDC-EDW-STG-SBQQ-QUOTE--C"
+                              isByCopy="true"
+                              name="mct-SFDC-EDW-STG-SBQQ-QUOTE--C">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="MCT-CPQ-SF-FLATTEN-TABLE-TRIGGER"
+                              isByCopy="true"
+                              name="MCT-CPQ-SF-FLATTEN-TABLE-TRIGGER">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="MCT-PRODUCT2"
+                              isByCopy="true"
+                              name="MCT-PRODUCT2">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="MCT-SFDC-EDW-STG-SBQQ-QUOTELINES--C"
+                              isByCopy="true"
+                              name="MCT-SFDC-EDW-STG-SBQQ-QUOTELINES--C">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mct-SFDC-EDW-STG-OLD-USER"
+                              isByCopy="true"
+                              name="mct-SFDC-EDW-STG-OLD-USER">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>0YrL5CFB61RkaMTY5ZxWIF</types1:GUID>
+      <types1:DisplayName>TF_SFDC_EDW_STG_CPQ_LOAD</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2020-05-28T05:38:36.297Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
