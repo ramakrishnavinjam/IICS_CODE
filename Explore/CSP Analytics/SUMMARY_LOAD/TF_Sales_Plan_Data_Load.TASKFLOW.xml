@@ -1,0 +1,194 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>f3fZPE4zlrMZgpD-gt-2148910-2020-10-24T06:49:19.093Z::tf.xml</types1:EntryId>
+      <types1:Name>TF_Sales_Plan_Data_Load</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>dev_iod@informatica.com</types1:CreatedBy>
+      <types1:CreationDate>2020-10-24T06:49:19Z</types1:CreationDate>
+      <types1:ModifiedBy>dev_iod@informatica.com</types1:ModifiedBy>
+      <types1:ModificationDate>2020-10-24T06:52:31Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>dev_iod@informatica.com</types1:PublishedBy>
+      <types1:PublicationDate>2020-10-24T06:55:27Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/tf.TF_Sales_Plan_Data_Load/TF_Sales_Plan_Data_Load.tf.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="TF_Sales_Plan_Data_Load"
+                   name="TF_Sales_Plan_Data_Load"
+                   overrideAPIName="false">
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="Sales plan data load" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:MCT-SALES-PLAN-DATA-LT</option>
+                  </options>
+               </field>
+               <field description="" name="Sales Plan File Check" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:INFA-commandTask</option>
+                  </options>
+               </field>
+               <field description="" name="Sales_Plan_Load" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:MCT-SALES-PLAN-DATA-LT</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kgnbk4r7" targetId="kgnbk4rl"/>
+               </start>
+               <eventContainer id="kgnbk4rl">
+                  <service id="kgnbk4r6">
+                     <title>Sales Plan File Check</title>
+                     <serviceName>ICSExecuteCommandTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Task Name" source="constant">Sales Plan File Check</parameter>
+                        <parameter name="Wait for Task to Complete" source="constant">true</parameter>
+                        <parameter name="Runtime Environment" source="constant">000UI72500000000001D:azdevedhiics1</parameter>
+                        <parameter name="Script Name" source="constant">/devedhinfanfs/Scripts/Sales/Sales_Plan_Data_File_Check.sh</parameter>
+                        <parameter name="Input Arguments" source="constant"/>
+                        <parameter name="Work Directory" source="constant">/devedhinfanfs/Scripts/Sales</parameter>
+                        <parameter name="RuntimeEnvGUID" source="constant">8cAocuJLYb0lpioOZlizyk</parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.Sales Plan File Check/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.Sales Plan File Check/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.Sales Plan File Check/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.Sales Plan File Check/output/Exit_Code">Exit Code</operation>
+                        <operation source="field" to="temp.Sales Plan File Check/output/Execution_Status">Execution Status</operation>
+                        <operation source="field" to="temp.Sales Plan File Check/output/Std_Error">Std Error</operation>
+                     </serviceOutput>
+                  </service>
+                  <flow id="kgnbk4s5">
+                     <link id="kgnbk4s6" targetId="kgnbk4rl" type="containerLink"/>
+                  </flow>
+                  <flow id="kgnbk4s8">
+                     <end id="kgnbk4sf">
+                        <title>END - File not available</title>
+                     </end>
+                  </flow>
+                  <link id="kgnbk4s4" targetId="kgnbk4s5" type="containerLink"/>
+                  <link id="kgnbk4r8" targetId="j3wgfelm"/>
+                  <events>
+                     <catch faultField="temp.Sales Plan File Check/fault"
+                            id="kgnbk4rk"
+                            interrupting="true"
+                            name="error">
+                        <link id="kgnbk4s7" targetId="kgnbk4s8" type="containerLink"/>
+                     </catch>
+                  </events>
+               </eventContainer>
+               <container id="j3wgfelm" type="exclusive">
+                  <title>Decision 1</title>
+                  <flow id="kgnbk4tz">
+                     <eventContainer id="kgnbk4v5">
+                        <service id="kgnbk4uk">
+                           <title>Sales_Plan_Load</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">MCT_SALES_PLAN_DATA_LT</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">1n1V6vfuX5ElUF0cQ8doIa</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="MCT-SALES-PLAN-DATA-LT">temp.Sales_Plan_Load</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.Sales_Plan_Load/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.Sales_Plan_Load/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.Sales_Plan_Load/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.Sales_Plan_Load/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.Sales_Plan_Load/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.Sales_Plan_Load/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.Sales_Plan_Load/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.Sales_Plan_Load/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.Sales_Plan_Load/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.Sales_Plan_Load/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.Sales_Plan_Load/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.Sales_Plan_Load/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.Sales_Plan_Load/fault"
+                                  id="kgnbk4v3"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.Sales_Plan_Load/fault"
+                                  id="kgnbk4v4"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="kgnbk4u0" targetId="j3wgfelm" type="containerLink"/>
+                  </flow>
+                  <flow id="kgnbk4u1">
+                     <link id="kgnbk4u2" targetId="j3wgfelm" type="containerLink"/>
+                  </flow>
+                  <link id="kgnbk4tx" targetId="kgnbk4tz" type="containerLink">
+                     <condition source="formula">
+                        <function name="equals">
+                           <arg name="left">{$temp.SalesPlanFileCheck[1]/output[1]/Exit_Code}</arg>
+                           <arg name="right">{0}</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="kgnbk4ty" targetId="kgnbk4u1" type="containerLink"/>
+                  <link id="j3wgfelo" targetId="c"/>
+               </container>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="MCT-SALES-PLAN-DATA-LT"
+                              isByCopy="true"
+                              name="MCT-SALES-PLAN-DATA-LT">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="INFA-commandTask"
+                              isByCopy="true"
+                              name="INFA-commandTask">
+                  <description>This process object represents a taskflow specific command task output field details.</description>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>aluMpEMZWsPgvRiacsVic6</types1:GUID>
+      <types1:DisplayName>TF_Sales_Plan_Data_Load</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2020-10-30T12:28:37.864Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
