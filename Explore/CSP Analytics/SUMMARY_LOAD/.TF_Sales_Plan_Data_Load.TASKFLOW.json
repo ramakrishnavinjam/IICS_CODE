@@ -60,5 +60,25 @@
       }
     },
     "path" : "/Explore/CSP Analytics/SUMMARY_LOAD"
+  }, {
+    "id" : "geLGP4MPHYykDnjs2xq14y",
+    "name" : "MCT_SALES_PLAN_DATA_AT",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "000UI70Z0000000000UV"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/CSP Analytics/SUMMARY_LOAD"
   } ]
 }

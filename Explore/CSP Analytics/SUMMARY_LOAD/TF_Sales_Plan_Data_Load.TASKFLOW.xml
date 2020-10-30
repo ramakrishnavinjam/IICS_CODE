@@ -13,8 +13,8 @@
       <types1:CreatedBy>dev_iod@informatica.com</types1:CreatedBy>
       <types1:CreationDate>2020-10-24T06:49:19Z</types1:CreationDate>
       <types1:ModifiedBy>dev_iod@informatica.com</types1:ModifiedBy>
-      <types1:ModificationDate>2020-10-24T06:52:31Z</types1:ModificationDate>
-      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:ModificationDate>2020-10-30T12:38:18Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
       <types1:PublishedBy>dev_iod@informatica.com</types1:PublishedBy>
       <types1:PublicationDate>2020-10-24T06:55:27Z</types1:PublicationDate>
       <types1:PublishedContributionId>project:/tf.TF_Sales_Plan_Data_Load/TF_Sales_Plan_Data_Load.tf.xml</types1:PublishedContributionId>
@@ -43,6 +43,11 @@
                <field description="" name="Sales_Plan_Load" type="reference">
                   <options>
                      <option name="referenceTo">$po:MCT-SALES-PLAN-DATA-LT</option>
+                  </options>
+               </field>
+               <field description="" name="Sales_Plan_Load_AT" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:MCT-SALES-PLAN-DATA-AT</option>
                   </options>
                </field>
             </tempFields>
@@ -130,6 +135,7 @@
                               <operation source="field" to="temp.Sales_Plan_Load/output/Error_Message">Error Message</operation>
                            </serviceOutput>
                         </service>
+                        <link id="kgw8q7tv" targetId="kgw8q7u2"/>
                         <events>
                            <catch faultField="temp.Sales_Plan_Load/fault"
                                   id="kgnbk4v3"
@@ -139,6 +145,50 @@
                            </catch>
                            <catch faultField="temp.Sales_Plan_Load/fault"
                                   id="kgnbk4v4"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <eventContainer id="kgw8q7u2">
+                        <service id="kgw8q7tu">
+                           <title>Sales_Plan_Load_AT</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">MCT_SALES_PLAN_DATA_AT</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">geLGP4MPHYykDnjs2xq14y</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="MCT-SALES-PLAN-DATA-AT">temp.Sales_Plan_Load_AT</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.Sales_Plan_Load_AT/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.Sales_Plan_Load_AT/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.Sales_Plan_Load_AT/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.Sales_Plan_Load_AT/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.Sales_Plan_Load_AT/output/Task_Status">Task Status</operation>
+                              <operation source="field" to="temp.Sales_Plan_Load_AT/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.Sales_Plan_Load_AT/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field" to="temp.Sales_Plan_Load_AT/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.Sales_Plan_Load_AT/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.Sales_Plan_Load_AT/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.Sales_Plan_Load_AT/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.Sales_Plan_Load_AT/output/Error_Message">Error Message</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.Sales_Plan_Load_AT/fault"
+                                  id="kgw8q7u0"
+                                  interrupting="true"
+                                  name="error">
+                              <suspend/>
+                           </catch>
+                           <catch faultField="temp.Sales_Plan_Load_AT/fault"
+                                  id="kgw8q7u1"
                                   interrupting="true"
                                   name="warning"/>
                         </events>
@@ -184,11 +234,22 @@
                      <field label="Fault" name="fault" type="reference"/>
                   </detail>
                </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="MCT-SALES-PLAN-DATA-AT"
+                              isByCopy="true"
+                              name="MCT-SALES-PLAN-DATA-AT">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
             </dependencies>
          </taskflow>
       </types1:Entry>
       <types1:GUID>aluMpEMZWsPgvRiacsVic6</types1:GUID>
       <types1:DisplayName>TF_Sales_Plan_Data_Load</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2020-10-30T12:28:37.864Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2020-10-30T12:40:36.515Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>
